@@ -1,0 +1,18 @@
+---
+title: "structural equation modelling"
+author: "nils holmberg"
+date: "210401"
+output: 
+    ioslides_presentation:
+       widescreen: true
+       css: custom.css
+       logo: img/logo.png
+---
+
+## some
+
+markdown
+
+
+
+
