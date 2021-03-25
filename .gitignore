@@ -5,6 +5,7 @@
 # folder content
 log/*
 src/*
+!src/site/*
 tmp/*
 
 # keep empty dir
