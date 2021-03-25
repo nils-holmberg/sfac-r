@@ -1,0 +1,16 @@
+name: "sfac-r"
+output_dir: "."
+navbar:
+  title: "sfac-r"
+  left:
+    - text: "home"
+      href: index.html
+    - text: "sem"
+      href: sem.html
+    - text: "test"
+      href: test.html
+output:
+  html_document:
+    theme: flatly
+    highlight: tango
+    logo: img/logo.png
