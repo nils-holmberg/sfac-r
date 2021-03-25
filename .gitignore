@@ -4,7 +4,7 @@
 
 # folder content
 log/*
-#src/*
+src/*
 tmp/*
 
 # keep empty dir
