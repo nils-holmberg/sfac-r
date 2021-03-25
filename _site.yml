@@ -1,0 +1,22 @@
+name: "my-website"
+output_dir: "."
+navbar:
+  title: "HPC2N"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Profiling"
+      href: Profiling.html
+    - text: "Optimizing"
+      href: Optimizing.html
+    - text: "Memory Management"
+      href: Memory.html
+    - text: "Motivation for HPC"
+      href: Motivation.html
+    - text: "Using R in HPC"
+      href: RHPC.html
+output:
+  html_document:
+    theme: cerulean
+    highlight: textmate
+    logo: img/logo.png
