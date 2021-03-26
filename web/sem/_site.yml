@@ -1,7 +1,7 @@
-name: "sfac-r"
+name: "sem-r"
 output_dir: "."
 navbar:
-  title: "sfac-r"
+  title: "sem-r"
   left:
     - text: "home"
       href: index.html
