@@ -6,7 +6,7 @@ some course related projects here..
 
 ## simm32
 
-[structural equation modelling in r](web/)
+[structural equation modelling in r](web/sem/)
 
 ## komc30
 
