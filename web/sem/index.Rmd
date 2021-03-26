@@ -1,5 +1,5 @@
 ---
-title: "Using R in the Social Sciences"
+title: "structural equation modelling in r"
 ---
 <br/><br/>
 
