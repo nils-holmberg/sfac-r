@@ -5,8 +5,8 @@ navbar:
   left:
     - text: "home"
       href: index.html
-    - text: "sem"
-      href: sem.html
+    - text: "spss"
+      href: spss.html
     - text: "test"
       href: test.html
 output:
@@ -14,3 +14,5 @@ output:
     theme: flatly
     highlight: tango
     logo: img/logo.png
+    include:
+      after_body: footer.html
