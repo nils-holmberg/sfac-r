@@ -1,10 +1,12 @@
+[home](https://nils-holmberg.github.io/)
+
 # using r in the social sciences
 
-[home](https://nils-holmberg.github.io/)
+some course related projects here..
 
 ## simm32
 
-[structural equation modelling](web/)
+[structural equation modelling in r](web/)
 
 ## komc30
 
