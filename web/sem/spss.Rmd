@@ -1,13 +1,9 @@
 ---
-title: "Structural Equation <br/>Modelling in R"
+title: "SPSS AMOS"
 author: "Nils Holmberg"
 date: "210401"
-output: 
-    ioslides_presentation:
-       widescreen: true
-       css: custom.css
-       logo: img/logo.png
 ---
+<br/><br/>
 
 ## some
 
