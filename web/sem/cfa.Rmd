@@ -1,0 +1,10 @@
+---
+title: "Confirmatory Factor Analysis"
+author: "Nils Holmberg"
+date: "210401"
+---
+<br/><br/>
+
+
+## some section
+
