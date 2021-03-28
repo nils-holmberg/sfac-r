@@ -1,17 +1,15 @@
 ---
-title: "structural equation modelling in r"
+title: "Structural Equation Modelling in R"
+author: "Nils Holmberg"
+date: "210401"
 ---
 <br/><br/>
 
-# some
+## Introduction
 
-markdown
+Structural Equation Modelling (SEM) is a method that allows the researcher to test causal relationships between latent factors. It is similar to multiple linear regression and path analysis but is built on the foundation of a reflective measurement model and thus naturally controls for measurement error. SEM follows a two-step process with confirmatory factor analysis (CFA) preceding testing of causal predictions. The current guide takes this perspective. Indeed, a researcher competent in CFA may find SEM somewhat of an anticlimax since the majority of the theoretical and practical mastery required occurs in the former rather than the latter.
 
-# code
-
-goes
-
-## here
+## Section
 
 
 

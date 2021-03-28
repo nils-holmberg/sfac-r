@@ -9,9 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Nils Holmberg" />
 
+<meta name="date" content="2104-01-01" />
 
-<title>structural equation modelling in r</title>
+<title>Structural Equation Modelling in R</title>
 
 <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -21,7 +23,8 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<script src="site_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -32,6 +35,21 @@
   ul.task-list{list-style: none;}
     </style>
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
 
 
 
@@ -282,6 +300,9 @@ $(document).ready(function () {
 <li>
   <a href="test.html">test</a>
 </li>
+<li>
+  <a href="slides.html">slides</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -294,22 +315,20 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">structural equation modelling in r</h1>
+<h1 class="title toc-ignore">Structural Equation Modelling in R</h1>
+<h4 class="author">Nils Holmberg</h4>
+<h4 class="date">210401</h4>
 
 </div>
 
 
 <p><br/><br/></p>
-<div id="some" class="section level1">
-<h1>some</h1>
-<p>markdown</p>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>Structural Equation Modelling (SEM) is a method that allows the researcher to test causal relationships between latent factors. It is similar to multiple linear regression and path analysis but is built on the foundation of a reflective measurement model and thus naturally controls for measurement error. SEM follows a two-step process with confirmatory factor analysis (CFA) preceding testing of causal predictions. The current guide takes this perspective. Indeed, a researcher competent in CFA may find SEM somewhat of an anticlimax since the majority of the theoretical and practical mastery required occurs in the former rather than the latter.</p>
 </div>
-<div id="code" class="section level1">
-<h1>code</h1>
-<p>goes</p>
-<div id="here" class="section level2">
-<h2>here</h2>
-</div>
+<div id="section" class="section level2">
+<h2>Section</h2>
 </div>
 
 <br/>
