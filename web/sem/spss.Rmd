@@ -7,16 +7,12 @@ date: "210401"
 
 ## Introduction
 
-This example dataset introduces readers to Structural Equation Modelling (SEM). The example presented here provides a foundation in SEM. As such, issues pertaining to its specification, assumptions, and interpretation are given. Since this is an introductory dataset, the reader will not be burdened with difficult mathematical notation, nor will advanced issues such as moderation and mediation or growth-curve models be included.
+SEM is a covariance-based statistical methodology. It allows the researcher to test hypotheses about causal relationships, in much the same way as simple or multiple linear regression. It has three advantages over these techniques: (1) SEM allows an entire system of causal predictions to be tested simultaneously, rather than (as in the case of regression) one equation at a time; (2) SEM normally uses latent factors, typically representing overarching unobserved variables captured in the covariances of related observed variables, and this is beneficial because measurement error can be captured and controlled for; and (3) the validity of the overall model can be evaluated using global fit indices. Practically, SEM should follow CFA (covered in a different SAGE dataset).
 
+## Dataset and theoretical model
 We illustrate the SEM using a subset of data from the International Sponsorship Study (ISS 2016), which broadly captures consumer attitudes towards international sponsorship deals. Specifically, we test the predictive relationships between four latent factors. We test whether animosity towards Germany and ethnocentrism more generally, predict consumer attitudes (ATT) towards German automotive brand SMART. We also investigate whether higher levels of ATT significantly improve perceptions of fit for a hypothetical sponsorship between SMART and the England international soccer team.
 
-## Dataset and codebook
-international sponsorship survey
-
-## Theoretical model
-some intro
-```{r img-model, echo=F, fig.cap="en theoretical model", out.width='80%', fig.asp=.75, fig.align='center'}
+```{r img-model, echo=F, fig.cap="Theoretical model", out.width='80%', fig.asp=.75, fig.align='center'}
 knitr::include_graphics("img/theory-model.jpg")
 ```
 
