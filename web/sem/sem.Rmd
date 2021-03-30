@@ -1,0 +1,65 @@
+---
+title: "Structural Equation Modelling"
+author: "Nils Holmberg"
+date: "210401"
+---
+<br/><br/>
+
+## packages
+
+```{r}
+#install to location
+#install.packages("lavaan", dependencies=TRUE, lib="C:/Program Files/R/lib")
+#install.packages("lavaan", dependencies=TRUE, lib="~/lib/r-cran")
+#load
+library(lavaan)
+```
+
+## modelling
+
+```{r}
+sim <- function(l) {
+ c <- rep(0,l)
+ hits <- 0
+ pow2 <- function(x) {
+   x2 <- sqrt( x[1]*x[1]+x[2]*x[2] )
+   return(x2)
+ }
+ for(i in 1:l){
+   x = runif(2,-1,1)
+   if( pow2(x) <=1 ){
+     hits <- hits + 1
+   }
+   dens <- hits/i
+   pi_partial = dens*4
+   c[i] = pi_partial
+ }
+ return(c)
+}
+```
+
+## pi calculation
+
+The accuracy of the calculation increases with the number of iterations
+
+```{r fig.width=5, fig.height=3, fig.align='center'}
+size <- 100000
+res <- sim(size)
+plot(res[1:size],type='l', xlab="Nr. iterations", ylab="Pi")
+lines(rep(pi,size)[1:size], col = 'red')
+```
+
+## some section
+with text and all..
+
+```{r}
+#?HolzingerSwineford1939
+HS.model <- ' visual  =~ x1 + x2 + x3 
+              textual =~ x4 + x5 + x6
+              speed   =~ x7 + x8 + x9 '
+fit <- cfa(HS.model, data=HolzingerSwineford1939)
+summary(fit, fit.measures=TRUE)
+```
+
+
+

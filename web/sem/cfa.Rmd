@@ -1,0 +1,35 @@
+---
+title: "Confirmatory Factor Analysis"
+author: "Nils Holmberg"
+date: "210401"
+---
+<br/><br/>
+
+## read sample data
+data contains observations of..
+
+```{r}
+#read spss files .sav
+#install.packages("haven", lib="~/lib/r-cran")
+#install.packages("haven", lib="C:/Program Files/R/lib")
+library(haven)
+
+#project string
+pstr = "csv/dataset-iss-2016-subset1"
+pstr = "../../csv/dataset-iss-2016-subset1"
+
+#read sav
+dfs = read_sav(paste0(pstr, ".sav"))
+#get labels
+dfl = data.frame(label=sapply(dfs, function(x) attributes(x)$label))
+dfl$vars = rownames(dfl)
+
+#export csv
+write.table(dfs, paste0(pstr, ".csv"), sep="\t", row.names=F)
+#read csv
+dfs = read.table(paste0(pstr, ".csv"), sep='\t', header=T, strip.white=TRUE, stringsAsFactors=FALSE)
+```
+
+## cfa using lavaan
+data contains observations of..
+

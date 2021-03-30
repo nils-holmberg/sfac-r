@@ -1,0 +1,15 @@
+---
+title: "SPSS AMOS"
+author: "Nils Holmberg"
+date: "210401"
+---
+<br/><br/>
+
+## Introduction
+
+This example dataset introduces readers to Structural Equation Modelling (SEM). The example presented here provides a foundation in SEM. As such, issues pertaining to its specification, assumptions, and interpretation are given. Since this is an introductory dataset, the reader will not be burdened with difficult mathematical notation, nor will advanced issues such as moderation and mediation or growth-curve models be included.
+
+We illustrate the SEM using a subset of data from the International Sponsorship Study (ISS 2016), which broadly captures consumer attitudes towards international sponsorship deals. Specifically, we test the predictive relationships between four latent factors. We test whether animosity towards Germany and ethnocentrism more generally, predict consumer attitudes (ATT) towards German automotive brand SMART. We also investigate whether higher levels of ATT significantly improve perceptions of fit for a hypothetical sponsorship between SMART and the England international soccer team.
+
+
+
