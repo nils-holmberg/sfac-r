@@ -295,7 +295,7 @@ $(document).ready(function () {
   <a href="cfa.html">cfa</a>
 </li>
 <li>
-  <a href="main.html">sem</a>
+  <a href="sem.html">sem</a>
 </li>
 <li>
   <a href="test.html">test</a>
@@ -323,8 +323,32 @@ $(document).ready(function () {
 
 
 <p><br/><br/></p>
-<div id="some-section" class="section level2">
-<h2>some section</h2>
+<div id="read-sample-data" class="section level2">
+<h2>read sample data</h2>
+<p>data contains observations of..</p>
+<pre class="r"><code>#read spss files .sav
+#install.packages(&quot;haven&quot;, lib=&quot;~/lib/r-cran&quot;)
+#install.packages(&quot;haven&quot;, lib=&quot;C:/Program Files/R/lib&quot;)
+library(haven)
+
+#project string
+pstr = &quot;csv/dataset-iss-2016-subset1&quot;
+pstr = &quot;../../csv/dataset-iss-2016-subset1&quot;
+
+#read sav
+dfs = read_sav(paste0(pstr, &quot;.sav&quot;))
+#get labels
+dfl = data.frame(label=sapply(dfs, function(x) attributes(x)$label))
+dfl$vars = rownames(dfl)
+
+#export csv
+write.table(dfs, paste0(pstr, &quot;.csv&quot;), sep=&quot;\t&quot;, row.names=F)
+#read csv
+dfs = read.table(paste0(pstr, &quot;.csv&quot;), sep=&#39;\t&#39;, header=T, strip.white=TRUE, stringsAsFactors=FALSE)</code></pre>
+</div>
+<div id="cfa-using-lavaan" class="section level2">
+<h2>cfa using lavaan</h2>
+<p>data contains observations of..</p>
 </div>
 
 <br/>
