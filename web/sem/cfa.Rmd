@@ -7,7 +7,6 @@ date: "210401"
 
 ## read sample data
 data contains observations of..
-
 ```{r}
 #read spss files .sav
 #install.packages("haven", lib="~/lib/r-cran")
@@ -32,4 +31,44 @@ dfs = read.table(paste0(pstr, ".csv"), sep='\t', header=T, strip.white=TRUE, str
 
 ## cfa using lavaan
 data contains observations of..
+```{r}
+#install.packages("lavaan", dependencies=TRUE, lib="~/lib/r-cran")
+#install.packages("lavaan", dependencies=TRUE, lib="C:/Program Files/R/lib")
+library(lavaan)
+
+#specify latent variables
+animosity       =~ ANI1 + ANI2 + ANI3 + ANI4
+ethnocentrism   =~ ETHNO1 + ETHNO2 + ETHNO3
+
+#specify model
+iss.cfa.model <- '
+animosity       =~ ANI1 + ANI2 + ANI3 + ANI4
+ethnocentrism   =~ ETHNO1 + ETHNO2 + ETHNO3
+'
+#fit model
+fit <- cfa(iss.cfa.model, data=dfs)
+
+#get model info
+summary(fit, fit.measures=TRUE)
+```
+
+## cfa using lavaan
+data contains observations of..
+```{r}
+#
+```
+
+## cfa using lavaan
+data contains observations of..
+```{r}
+#
+```
+
+## cfa using lavaan
+data contains observations of..
+```{r}
+#
+```
+
+
 
