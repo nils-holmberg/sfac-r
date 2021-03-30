@@ -11,5 +11,14 @@ This example dataset introduces readers to Structural Equation Modelling (SEM). 
 
 We illustrate the SEM using a subset of data from the International Sponsorship Study (ISS 2016), which broadly captures consumer attitudes towards international sponsorship deals. Specifically, we test the predictive relationships between four latent factors. We test whether animosity towards Germany and ethnocentrism more generally, predict consumer attitudes (ATT) towards German automotive brand SMART. We also investigate whether higher levels of ATT significantly improve perceptions of fit for a hypothetical sponsorship between SMART and the England international soccer team.
 
+## Dataset and codebook
+international sponsorship survey
 
+## Theoretical model
+some intro
+```{r img-model, echo=F, fig.cap="en theoretical model", out.width='80%', fig.asp=.75, fig.align='center'}
+knitr::include_graphics("img/theory-model.jpg")
+```
 
+## Section
+Ab
