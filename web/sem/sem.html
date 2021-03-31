@@ -363,42 +363,9 @@ fit &lt;- cfa(iss.model, data=dfs)
 
 #check standardized factor loadings (check significance values &lt;0.05)
 #Standardized Regression Weights, all factor loadings are high (i.e., &gt;.70)
-inspect(fit, what=&quot;std&quot;)</code></pre>
-<pre><code>## $lambda
-##        anmsty ethncn brnd_t brnd_f
-## ANI1    0.848  0.000  0.000  0.000
-## ANI2    0.936  0.000  0.000  0.000
-## ANI3    0.893  0.000  0.000  0.000
-## ANI4    0.720  0.000  0.000  0.000
-## ETHNO1  0.000  0.867  0.000  0.000
-## ETHNO2  0.000  0.838  0.000  0.000
-## ETHNO3  0.000  0.942  0.000  0.000
-## AT1     0.000  0.000  0.907  0.000
-## AT2     0.000  0.000  0.998  0.000
-## FIT1    0.000  0.000  0.000  0.739
-## FIT2    0.000  0.000  0.000  0.938
-## 
-## $theta
-##        ANI1  ANI2  ANI3  ANI4  ETHNO1 ETHNO2 ETHNO3 AT1   AT2   FIT1  FIT2 
-## ANI1   0.281                                                               
-## ANI2   0.000 0.124                                                         
-## ANI3   0.000 0.000 0.203                                                   
-## ANI4   0.000 0.000 0.000 0.481                                             
-## ETHNO1 0.000 0.000 0.000 0.000 0.248                                       
-## ETHNO2 0.000 0.000 0.000 0.000 0.000  0.298                                
-## ETHNO3 0.000 0.000 0.000 0.000 0.000  0.000  0.113                         
-## AT1    0.000 0.000 0.000 0.000 0.000  0.000  0.000  0.177                  
-## AT2    0.000 0.000 0.000 0.000 0.000  0.000  0.000  0.000 0.004            
-## FIT1   0.000 0.000 0.000 0.000 0.000  0.000  0.000  0.000 0.000 0.454      
-## FIT2   0.000 0.000 0.000 0.000 0.000  0.000  0.000  0.000 0.000 0.000 0.120
-## 
-## $psi
-##                anmsty ethncn brnd_t brnd_f
-## animosity       1.000                     
-## ethnocentrism   0.304  1.000              
-## brand_attitude -0.084  0.028  1.000       
-## brand_fit       0.048 -0.105  0.260  1.000</code></pre>
-<pre class="r"><code>#get model info, commonly accepted thresholds
+#inspect(fit, what=&quot;std&quot;)
+
+#get model info, commonly accepted thresholds
 #CFI = .96
 #TLI =.94
 #RMSEA = .09
@@ -647,7 +614,12 @@ summary(fit, fit.measures=TRUE, rsquare=TRUE, standardized=TRUE)</code></pre>
 </div>
 <div id="interpret-results" class="section level2">
 <h2>Interpret results</h2>
-<p>Stated in the form of three directional hypotheses, the following predicted relationships are tested: - <strong>H1a:</strong> Higher animosity towards Germany leads to a lower attitude towards SMART. - <strong>H1b:</strong> Higher ethnocentrism leads to a lower attitude towards SMART car brand. - <strong>H1c:</strong> A higher attitude towards SMART leads to a more favourable perception of its fit with the England soccer team as its primary sponsor.</p>
+<p>Stated in the form of three directional hypotheses, the following predicted relationships are tested:</p>
+<ul>
+<li><strong>H1a:</strong> Higher animosity towards Germany leads to a lower attitude towards SMART.</li>
+<li><strong>H1b:</strong> Higher ethnocentrism leads to a lower attitude towards SMART car brand.</li>
+<li><strong>H1c:</strong> A higher attitude towards SMART leads to a more favourable perception of its fit with the England soccer team as its primary sponsor.</li>
+</ul>
 </div>
 <div id="wrap-up" class="section level2">
 <h2>Wrap-up</h2>

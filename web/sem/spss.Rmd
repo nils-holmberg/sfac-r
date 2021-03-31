@@ -1,5 +1,5 @@
 ---
-title: "SPSS AMOS"
+title: "SPSS Amos"
 author: "Nils Holmberg"
 date: "210401"
 ---

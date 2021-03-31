@@ -32,7 +32,7 @@ fit <- cfa(iss.model, data=dfs)
 
 #check standardized factor loadings (check significance values <0.05)
 #Standardized Regression Weights, all factor loadings are high (i.e., >.70)
-inspect(fit, what="std")
+#inspect(fit, what="std")
 
 #get model info, commonly accepted thresholds
 #CFI = .96
@@ -72,10 +72,10 @@ summary(fit, fit.measures=TRUE, rsquare=TRUE, standardized=TRUE)
 
 ## Interpret results
 Stated in the form of three directional hypotheses, the following predicted relationships are tested:
+
 - **H1a:** Higher animosity towards Germany leads to a lower attitude towards SMART. 
 - **H1b:** Higher ethnocentrism leads to a lower attitude towards SMART car brand. 
 - **H1c:** A higher attitude towards SMART leads to a more favourable perception of its fit with the England soccer team as its primary sponsor.
-
 
 ## Wrap-up
 - what is sem, concepts, short intro, confirmatory framework
