@@ -61,5 +61,16 @@ fit <- cfa(HS.model, data=HolzingerSwineford1939)
 summary(fit, fit.measures=TRUE)
 ```
 
+## cfa using lavaan
+data contains observations of..
+```{r}
+#
+```
+
+## cfa using lavaan
+data contains observations of..
+```{r}
+#
+```
 
 
