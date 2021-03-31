@@ -359,86 +359,94 @@ brand_fit       =~ FIT1 + FIT2
 &#39;
 
 #fit model
-fit &lt;- cfa(iss.cfa.model, data=dfs)
+fit &lt;- cfa(iss.model, data=dfs)
 
 #check standardized factor loadings (check significance values &lt;0.05)
 #Standardized Regression Weights, all factor loadings are high (i.e., &gt;.70)
 inspect(fit, what=&quot;std&quot;)</code></pre>
 <pre><code>## $lambda
-##        anmsty ethncn
-## ANI1    0.847  0.000
-## ANI2    0.937  0.000
-## ANI3    0.893  0.000
-## ANI4    0.721  0.000
-## ANI5   -0.095  0.000
-## ETHNO1  0.000  0.869
-## ETHNO2  0.000  0.839
-## ETHNO3  0.000  0.940
+##        anmsty ethncn brnd_t brnd_f
+## ANI1    0.848  0.000  0.000  0.000
+## ANI2    0.936  0.000  0.000  0.000
+## ANI3    0.893  0.000  0.000  0.000
+## ANI4    0.720  0.000  0.000  0.000
+## ETHNO1  0.000  0.867  0.000  0.000
+## ETHNO2  0.000  0.838  0.000  0.000
+## ETHNO3  0.000  0.942  0.000  0.000
+## AT1     0.000  0.000  0.907  0.000
+## AT2     0.000  0.000  0.998  0.000
+## FIT1    0.000  0.000  0.000  0.739
+## FIT2    0.000  0.000  0.000  0.938
 ## 
 ## $theta
-##        ANI1  ANI2  ANI3  ANI4  ANI5  ETHNO1 ETHNO2 ETHNO3
-## ANI1   0.283                                             
-## ANI2   0.000 0.123                                       
-## ANI3   0.000 0.000 0.203                                 
-## ANI4   0.000 0.000 0.000 0.480                           
-## ANI5   0.000 0.000 0.000 0.000 0.991                     
-## ETHNO1 0.000 0.000 0.000 0.000 0.000 0.245               
-## ETHNO2 0.000 0.000 0.000 0.000 0.000 0.000  0.297        
-## ETHNO3 0.000 0.000 0.000 0.000 0.000 0.000  0.000  0.117 
+##        ANI1  ANI2  ANI3  ANI4  ETHNO1 ETHNO2 ETHNO3 AT1   AT2   FIT1  FIT2 
+## ANI1   0.281                                                               
+## ANI2   0.000 0.124                                                         
+## ANI3   0.000 0.000 0.203                                                   
+## ANI4   0.000 0.000 0.000 0.481                                             
+## ETHNO1 0.000 0.000 0.000 0.000 0.248                                       
+## ETHNO2 0.000 0.000 0.000 0.000 0.000  0.298                                
+## ETHNO3 0.000 0.000 0.000 0.000 0.000  0.000  0.113                         
+## AT1    0.000 0.000 0.000 0.000 0.000  0.000  0.000  0.177                  
+## AT2    0.000 0.000 0.000 0.000 0.000  0.000  0.000  0.000 0.004            
+## FIT1   0.000 0.000 0.000 0.000 0.000  0.000  0.000  0.000 0.000 0.454      
+## FIT2   0.000 0.000 0.000 0.000 0.000  0.000  0.000  0.000 0.000 0.000 0.120
 ## 
 ## $psi
-##               anmsty ethncn
-## animosity     1.000        
-## ethnocentrism 0.307  1.000</code></pre>
+##                anmsty ethncn brnd_t brnd_f
+## animosity       1.000                     
+## ethnocentrism   0.304  1.000              
+## brand_attitude -0.084  0.028  1.000       
+## brand_fit       0.048 -0.105  0.260  1.000</code></pre>
 <pre class="r"><code>#get model info, commonly accepted thresholds
-#CFI = .96, 
-#TLI =.94, 
+#CFI = .96
+#TLI =.94
 #RMSEA = .09
 summary(fit, fit.measures=TRUE, standardized=TRUE)</code></pre>
-<pre><code>## lavaan 0.6-8 ended normally after 30 iterations
+<pre><code>## lavaan 0.6-8 ended normally after 45 iterations
 ## 
 ##   Estimator                                         ML
 ##   Optimization method                           NLMINB
-##   Number of model parameters                        17
+##   Number of model parameters                        28
 ##                                                       
 ##   Number of observations                           123
 ##                                                       
 ## Model Test User Model:
 ##                                                       
-##   Test statistic                                39.642
-##   Degrees of freedom                                19
-##   P-value (Chi-square)                           0.004
+##   Test statistic                                52.674
+##   Degrees of freedom                                38
+##   P-value (Chi-square)                           0.057
 ## 
 ## Model Test Baseline Model:
 ## 
-##   Test statistic                               673.798
-##   Degrees of freedom                                28
+##   Test statistic                               988.835
+##   Degrees of freedom                                55
 ##   P-value                                        0.000
 ## 
 ## User Model versus Baseline Model:
 ## 
-##   Comparative Fit Index (CFI)                    0.968
-##   Tucker-Lewis Index (TLI)                       0.953
+##   Comparative Fit Index (CFI)                    0.984
+##   Tucker-Lewis Index (TLI)                       0.977
 ## 
 ## Loglikelihood and Information Criteria:
 ## 
-##   Loglikelihood user model (H0)              -1399.814
-##   Loglikelihood unrestricted model (H1)      -1379.993
+##   Loglikelihood user model (H0)              -1871.966
+##   Loglikelihood unrestricted model (H1)      -1845.629
 ##                                                       
-##   Akaike (AIC)                                2833.628
-##   Bayesian (BIC)                              2881.435
-##   Sample-size adjusted Bayesian (BIC)         2827.682
+##   Akaike (AIC)                                3799.932
+##   Bayesian (BIC)                              3878.673
+##   Sample-size adjusted Bayesian (BIC)         3790.139
 ## 
 ## Root Mean Square Error of Approximation:
 ## 
-##   RMSEA                                          0.094
-##   90 Percent confidence interval - lower         0.052
-##   90 Percent confidence interval - upper         0.135
-##   P-value RMSEA &lt;= 0.05                          0.043
+##   RMSEA                                          0.056
+##   90 Percent confidence interval - lower         0.000
+##   90 Percent confidence interval - upper         0.090
+##   P-value RMSEA &lt;= 0.05                          0.368
 ## 
 ## Standardized Root Mean Square Residual:
 ## 
-##   SRMR                                           0.056
+##   SRMR                                           0.047
 ## 
 ## Parameter Estimates:
 ## 
@@ -447,35 +455,52 @@ summary(fit, fit.measures=TRUE, standardized=TRUE)</code></pre>
 ##   Information saturated (h1) model          Structured
 ## 
 ## Latent Variables:
-##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
-##   animosity =~                                                          
-##     ANI1              1.000                               1.183    0.847
-##     ANI2              1.037    0.074   13.937    0.000    1.227    0.937
-##     ANI3              1.014    0.078   13.010    0.000    1.199    0.893
-##     ANI4              0.831    0.090    9.267    0.000    0.983    0.721
-##     ANI5             -0.112    0.110   -1.021    0.307   -0.132   -0.095
-##   ethnocentrism =~                                                      
-##     ETHNO1            1.000                               1.145    0.869
-##     ETHNO2            1.174    0.097   12.068    0.000    1.344    0.839
-##     ETHNO3            1.125    0.081   13.845    0.000    1.289    0.940
+##                     Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##   animosity =~                                                           
+##     ANI1               1.000                               1.184    0.848
+##     ANI2               1.035    0.074   13.962    0.000    1.226    0.936
+##     ANI3               1.013    0.078   13.044    0.000    1.199    0.893
+##     ANI4               0.829    0.090    9.260    0.000    0.982    0.720
+##   ethnocentrism =~                                                       
+##     ETHNO1             1.000                               1.144    0.867
+##     ETHNO2             1.174    0.098   12.034    0.000    1.343    0.838
+##     ETHNO3             1.129    0.082   13.856    0.000    1.291    0.942
+##   brand_attitude =~                                                      
+##     AT1                1.000                               1.110    0.907
+##     AT2                1.161    0.178    6.522    0.000    1.289    0.998
+##   brand_fit =~                                                           
+##     FIT1               1.000                               1.019    0.739
+##     FIT2               1.324    0.392    3.376    0.001    1.350    0.938
 ## 
 ## Covariances:
-##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
-##   animosity ~~                                                          
-##     ethnocentrism     0.416    0.140    2.972    0.003    0.307    0.307
+##                     Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##   animosity ~~                                                           
+##     ethnocentrism      0.412    0.140    2.954    0.003    0.304    0.304
+##     brand_attitude    -0.110    0.124   -0.885    0.376   -0.084   -0.084
+##     brand_fit          0.059    0.120    0.488    0.626    0.048    0.048
+##   ethnocentrism ~~                                                       
+##     brand_attitude     0.035    0.119    0.295    0.768    0.028    0.028
+##     brand_fit         -0.122    0.120   -1.020    0.308   -0.105   -0.105
+##   brand_attitude ~~                                                      
+##     brand_fit          0.294    0.141    2.083    0.037    0.260    0.260
 ## 
 ## Variances:
 ##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
-##    .ANI1              0.552    0.087    6.374    0.000    0.552    0.283
-##    .ANI2              0.211    0.056    3.750    0.000    0.211    0.123
-##    .ANI3              0.366    0.068    5.423    0.000    0.366    0.203
-##    .ANI4              0.893    0.123    7.248    0.000    0.893    0.480
-##    .ANI5              1.931    0.246    7.837    0.000    1.931    0.991
-##    .ETHNO1            0.427    0.078    5.441    0.000    0.427    0.245
-##    .ETHNO2            0.762    0.125    6.111    0.000    0.762    0.297
-##    .ETHNO3            0.219    0.076    2.870    0.004    0.219    0.117
-##     animosity         1.399    0.244    5.736    0.000    1.000    1.000
-##     ethnocentrism     1.312    0.222    5.903    0.000    1.000    1.000</code></pre>
+##    .ANI1              0.549    0.086    6.363    0.000    0.549    0.281
+##    .ANI2              0.212    0.056    3.778    0.000    0.212    0.124
+##    .ANI3              0.365    0.067    5.417    0.000    0.365    0.203
+##    .ANI4              0.895    0.123    7.251    0.000    0.895    0.481
+##    .ETHNO1            0.431    0.079    5.487    0.000    0.431    0.248
+##    .ETHNO2            0.766    0.125    6.135    0.000    0.766    0.298
+##    .ETHNO3            0.213    0.076    2.794    0.005    0.213    0.113
+##    .AT1               0.264    0.185    1.431    0.153    0.264    0.177
+##    .AT2               0.006    0.245    0.025    0.980    0.006    0.004
+##    .FIT1              0.865    0.315    2.743    0.006    0.865    0.454
+##    .FIT2              0.249    0.519    0.480    0.631    0.249    0.120
+##     animosity         1.402    0.244    5.746    0.000    1.000    1.000
+##     ethnocentrism     1.308    0.222    5.890    0.000    1.000    1.000
+##     brand_attitude    1.231    0.261    4.715    0.000    1.000    1.000
+##     brand_fit         1.039    0.366    2.838    0.005    1.000    1.000</code></pre>
 </div>
 <div id="step-2-structural-equation-modelling" class="section level2">
 <h2>Step 2: Structural Equation Modelling</h2>
