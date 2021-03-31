@@ -1,0 +1,12 @@
+---
+title: "Comparing groups, experiments"
+author: "Nils Holmberg"
+date: "210401"
+---
+<br/><br/>
+
+## read sample data
+data contains observations of..
+```{r}
+#
+```

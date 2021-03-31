@@ -5,16 +5,30 @@ date: "210401"
 ---
 <br/><br/>
 
-## Introduction
+## Dataset
+We illustrate the SEM using a subset of data from the International Sponsorship Study (ISS 2016), which broadly captures consumer attitudes towards international sponsorship deals. Specifically, we test the predictive relationships between four latent factors. 
 
-SEM is a covariance-based statistical methodology. It allows the researcher to test hypotheses about causal relationships, in much the same way as simple or multiple linear regression. It has three advantages over these techniques: (1) SEM allows an entire system of causal predictions to be tested simultaneously, rather than (as in the case of regression) one equation at a time; (2) SEM normally uses latent factors, typically representing overarching unobserved variables captured in the covariances of related observed variables, and this is beneficial because measurement error can be captured and controlled for; and (3) the validity of the overall model can be evaluated using global fit indices. Practically, SEM should follow CFA (covered in a different SAGE dataset).
+- https://methods.sagepub.com/dataset/sem-iss-2016
 
-## Dataset and theoretical model
-We illustrate the SEM using a subset of data from the International Sponsorship Study (ISS 2016), which broadly captures consumer attitudes towards international sponsorship deals. Specifically, we test the predictive relationships between four latent factors. We test whether animosity towards Germany and ethnocentrism more generally, predict consumer attitudes (ATT) towards German automotive brand SMART. We also investigate whether higher levels of ATT significantly improve perceptions of fit for a hypothetical sponsorship between SMART and the England international soccer team.
+## Theoretical model
+We test whether animosity towards Germany and ethnocentrism more generally, predict consumer attitudes (ATT) towards German automotive brand SMART. We also investigate whether higher levels of ATT significantly improve perceptions of fit for a hypothetical sponsorship between SMART and the England international soccer team.
 
 ```{r img-model, echo=F, fig.cap="Theoretical model", out.width='80%', fig.asp=.75, fig.align='center'}
 knitr::include_graphics("img/theory-model.jpg")
 ```
 
-## Section
+## Hypotheses
+Stated in the form of threedirectional hypotheses, the following predicted relationships are tested:
+
+- H1a: Higher animosity towards Germany leads to a lower attitude towards SMART. 
+- H1b: Higher ethnocentrism leads to a lower attitude towards SMART. 
+- H1c: A higher attitude towards SMART leads to a more favourable perception of its fit with the England soccer team as its primary sponsor.
+
+## SPSS
 Ab
+
+- https://remote.student.lu.se/
+
+
+
+
