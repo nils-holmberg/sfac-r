@@ -5,8 +5,12 @@ date: "210401"
 ---
 <br/>
 
-## read sample data
-data contains observations of..
+## Read SPSS data into R
+Haven enables R to read and write various data formats used by other statistical packages by wrapping the fantastic ReadStat C library written by Evan Miller. Haven is part of the tidyverse.
+
+- https://haven.tidyverse.org/
+- https://rstudio.cloud/project/2337715
+
 ```{r}
 #read spss files .sav
 #install.packages("haven", lib="~/lib/r-cran")
@@ -29,8 +33,11 @@ write.table(dfs, paste0(pstr, ".csv"), sep="\t", row.names=F)
 dfs = read.table(paste0(pstr, ".csv"), sep='\t', header=T, strip.white=TRUE, stringsAsFactors=FALSE)
 ```
 
-## cfa using lavaan
-data contains observations of..
+## CFA using package "lavaan"
+The lavaan package is developed to provide useRs, researchers and teachers a free open-source, but commercial-quality package for latent variable modeling. You can use lavaan to estimate a large variety of multivariate statistical models, including path analysis, confirmatory factor analysis, structural equation modeling and growth curve models.
+
+- https://lavaan.ugent.be/index.html
+
 ```{r}
 #install.packages("lavaan", dependencies=TRUE, lib="~/lib/r-cran")
 #install.packages("lavaan", dependencies=TRUE, lib="C:/Program Files/R/lib")
