@@ -18,15 +18,16 @@ knitr::include_graphics("img/theory-model.jpg")
 ```
 
 ## Hypotheses
-Stated in the form of threedirectional hypotheses, the following predicted relationships are tested:
+Stated in the form of three directional hypotheses, the following predicted relationships are tested:
 
-- H1a: Higher animosity towards Germany leads to a lower attitude towards SMART. 
-- H1b: Higher ethnocentrism leads to a lower attitude towards SMART. 
-- H1c: A higher attitude towards SMART leads to a more favourable perception of its fit with the England soccer team as its primary sponsor.
+- **H1a:** Higher animosity towards Germany leads to a lower attitude towards SMART. 
+- **H1b:** Higher ethnocentrism leads to a lower attitude towards SMART car brand. 
+- **H1c:** A higher attitude towards SMART leads to a more favourable perception of its fit with the England soccer team as its primary sponsor.
 
-## SPSS
-Ab
+## SPSS Amos hands-on
+SPSS Amos is a powerful structural equation modeling (SEM) software helping support your research and theories by extending standard multivariate analysis methods, including regression, factor analysis, correlation and analysis of variance.
 
+- https://www.ibm.com/products/structural-equation-modeling-sem
 - https://remote.student.lu.se/
 
 

@@ -42,20 +42,29 @@ The lavaan (**la**tent **va**riable **an**alysis) package is developed to provid
 #install.packages("lavaan", dependencies=TRUE, lib="C:/Program Files/R/lib")
 library(lavaan)
 
-#specify latent variables
+#specify formulas for latent variables
 animosity       =~ ANI1 + ANI2 + ANI3 + ANI4
 ethnocentrism   =~ ETHNO1 + ETHNO2 + ETHNO3
 
-#specify model
+#specify covariance, measurement model
 iss.cfa.model <- '
-animosity       =~ ANI1 + ANI2 + ANI3 + ANI4
+#animosity       =~ ANI1 + ANI2 + ANI3 + ANI4
+animosity       =~ ANI1 + ANI2 + ANI3 + ANI4 + ANI5
 ethnocentrism   =~ ETHNO1 + ETHNO2 + ETHNO3
 '
+
 #fit model
 fit <- cfa(iss.cfa.model, data=dfs)
 
-#get model info
-summary(fit, fit.measures=TRUE)
+#check standardized factor loadings (check significance values <0.05)
+#Standardized Regression Weights, all factor loadings are high (i.e., >.70)
+inspect(fit, what="std")
+
+#get model info, commonly accepted thresholds
+#CFI = .96, 
+#TLI =.94, 
+#RMSEA = .09
+summary(fit, fit.measures=TRUE, standardized=TRUE)
 ```
 
 ## RStudio hands-on

@@ -5,70 +5,83 @@ date: "210401"
 ---
 <br/>
 
-## packages
+## Revisit theoretical model
+We test whether animosity towards Germany and ethnocentrism more generally, predict consumer attitudes (ATT) towards German automotive brand SMART. We also investigate whether higher levels of ATT significantly improve perceptions of fit for a hypothetical sponsorship between SMART and the England international soccer team.
+```{r img-model, echo=F, fig.cap="Theoretical model", out.width='80%', fig.asp=.75, fig.align='center'}
+knitr::include_graphics("img/theory-model.jpg")
+```
 
+## Step 1: Confirmatory Factor Analysis
+Lets build out the measurement model to include all exogeneous and endogeneous variables in the theoretical model.
 ```{r}
-#install to location
 #install.packages("lavaan", dependencies=TRUE, lib="C:/Program Files/R/lib")
 #install.packages("lavaan", dependencies=TRUE, lib="~/lib/r-cran")
-#load
 library(lavaan)
+
+#specify model, latent variables
+iss.model <- '
+# measurement model
+animosity       =~ ANI1 + ANI2 + ANI3 + ANI4
+ethnocentrism   =~ ETHNO1 + ETHNO2 + ETHNO3
+brand_attitude  =~ AT1 + AT2
+brand_fit       =~ FIT1 + FIT2
+'
+
+#fit model
+fit <- cfa(iss.cfa.model, data=dfs)
+
+#check standardized factor loadings (check significance values <0.05)
+#Standardized Regression Weights, all factor loadings are high (i.e., >.70)
+inspect(fit, what="std")
+
+#get model info, commonly accepted thresholds
+#CFI = .96, 
+#TLI =.94, 
+#RMSEA = .09
+summary(fit, fit.measures=TRUE, standardized=TRUE)
 ```
 
-## modelling
-
+## Step 2: Structural Equation Modelling
+If the preceeding CFA indicate acceptable results, then continue expanding the model with directional regression analyses, i.e. the structural model, again according to the theoretical model.
 ```{r}
-sim <- function(l) {
- c <- rep(0,l)
- hits <- 0
- pow2 <- function(x) {
-   x2 <- sqrt( x[1]*x[1]+x[2]*x[2] )
-   return(x2)
- }
- for(i in 1:l){
-   x = runif(2,-1,1)
-   if( pow2(x) <=1 ){
-     hits <- hits + 1
-   }
-   dens <- hits/i
-   pi_partial = dens*4
-   c[i] = pi_partial
- }
- return(c)
-}
-```
-
-## pi calculation
-
-The accuracy of the calculation increases with the number of iterations
-
-```{r fig.width=5, fig.height=3, fig.align='center'}
-size <- 100000
-res <- sim(size)
-plot(res[1:size],type='l', xlab="Nr. iterations", ylab="Pi")
-lines(rep(pi,size)[1:size], col = 'red')
-```
-
-## some section
-with text and all..
-
-```{r}
-#?HolzingerSwineford1939
-HS.model <- ' visual  =~ x1 + x2 + x3 
-              textual =~ x4 + x5 + x6
-              speed   =~ x7 + x8 + x9 '
-fit <- cfa(HS.model, data=HolzingerSwineford1939)
-summary(fit, fit.measures=TRUE)
-```
-
-## cfa using lavaan
-data contains observations of..
-```{r}
+#specify model, latent variables, regressions, residuals, covariances
+iss.model <- '
+# measurement model
+animosity       =~ ANI1 + ANI2 + ANI3 + ANI4
+ethnocentrism   =~ ETHNO1 + ETHNO2 + ETHNO3
+brand_attitude  =~ AT1 + AT2
+brand_fit       =~ FIT1 + FIT2
+# structured model, directional regressions
+brand_attitude  ~ animosity + ethnocentrism
+brand_fit       ~ brand_attitude
+# residual correlations, endogeneous
 #
+# covariances, exogeneous variables
+#animosity       ~~ ethnocentrism
+'
+
+#fit model
+fit <- sem(iss.model, data=dfs)
+
+#get model info
+#CFI = .96
+#TLI =.94
+#RMSEA = .09
+summary(fit, fit.measures=TRUE, rsquare=TRUE, standardized=TRUE)
 ```
 
-## cfa using lavaan
-data contains observations of..
+## Interpret results
+Stated in the form of three directional hypotheses, the following predicted relationships are tested:
+- **H1a:** Higher animosity towards Germany leads to a lower attitude towards SMART. 
+- **H1b:** Higher ethnocentrism leads to a lower attitude towards SMART car brand. 
+- **H1c:** A higher attitude towards SMART leads to a more favourable perception of its fit with the England soccer team as its primary sponsor.
+
+
+## Wrap-up
+- what is sem, concepts, short intro, confirmatory framework
+- when do we use sem, social science, survey research, tpb
+- what are the advantages of sem, multiple regression
+- how can we work with sem, spss, r
 ```{r}
 #
 ```
