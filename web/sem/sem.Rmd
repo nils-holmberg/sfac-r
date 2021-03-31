@@ -3,7 +3,7 @@ title: "Structural Equation Modelling"
 author: "Nils Holmberg"
 date: "210401"
 ---
-<br/><br/>
+<br/>
 
 ## packages
 

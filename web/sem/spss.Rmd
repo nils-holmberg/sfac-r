@@ -3,7 +3,7 @@ title: "SPSS AMOS"
 author: "Nils Holmberg"
 date: "210401"
 ---
-<br/><br/>
+<br/>
 
 ## Dataset
 We illustrate the SEM using a subset of data from the International Sponsorship Study (ISS 2016), which broadly captures consumer attitudes towards international sponsorship deals. Specifically, we test the predictive relationships between four latent factors. 
