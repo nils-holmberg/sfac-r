@@ -60,10 +60,11 @@ fit <- cfa(iss.cfa.model, data=dfs)
 #Standardized Regression Weights, all factor loadings are high (i.e., >.70)
 inspect(fit, what="std")
 
-#get model info, commonly accepted thresholds
-#CFI = .96, 
-#TLI =.94, 
-#RMSEA = .09
+#check if model fits data, commonly accepted thresholds
+#Chi-square: p > 0.05
+#CFI: > 0.90
+#TLI: > 0.95 (0.90)
+#RMSEA: < 0.10
 summary(fit, fit.measures=TRUE, standardized=TRUE)
 ```
 

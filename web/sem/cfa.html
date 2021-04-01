@@ -412,10 +412,11 @@ inspect(fit, what=&quot;std&quot;)</code></pre>
 ##               anmsty ethncn
 ## animosity     1.000        
 ## ethnocentrism 0.307  1.000</code></pre>
-<pre class="r"><code>#get model info, commonly accepted thresholds
-#CFI = .96, 
-#TLI =.94, 
-#RMSEA = .09
+<pre class="r"><code>#check if model fits data, commonly accepted thresholds
+#Chi-square: p &gt; 0.05
+#CFI: &gt; 0.90
+#TLI: &gt; 0.95 (0.90)
+#RMSEA: &lt; 0.10
 summary(fit, fit.measures=TRUE, standardized=TRUE)</code></pre>
 <pre><code>## lavaan 0.6-8 ended normally after 30 iterations
 ## 
