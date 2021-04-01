@@ -68,7 +68,7 @@ summary(fit, fit.measures=TRUE, standardized=TRUE)
 ```
 
 ## RStudio hands-on
-Let's continue by dowloading the githhub repo and import it to the R envirnment.
+Let's continue by dowloading the current github repo and import it to the R environment.
 
 - https://github.com/nils-holmberg/sfac-r/archive/refs/heads/main.zip
 - https://rstudio.cloud/project/2337715

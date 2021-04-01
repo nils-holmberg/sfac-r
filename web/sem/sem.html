@@ -344,7 +344,7 @@ Theoretical model
 </div>
 <div id="step-1-confirmatory-factor-analysis" class="section level2">
 <h2>Step 1: Confirmatory Factor Analysis</h2>
-<p>Lets build out the measurement model to include all exogeneous and endogeneous variables in the theoretical model.</p>
+<p>Let’s build out the measurement model to include not only the two exogeneous variables discussed in the previous examples, but also the two endogeneous (dependent) variables stated in the theoretical model.</p>
 <pre class="r"><code>#install.packages(&quot;lavaan&quot;, dependencies=TRUE, lib=&quot;C:/Program Files/R/lib&quot;)
 #install.packages(&quot;lavaan&quot;, dependencies=TRUE, lib=&quot;~/lib/r-cran&quot;)
 library(lavaan)
@@ -471,7 +471,7 @@ summary(fit, fit.measures=TRUE, standardized=TRUE)</code></pre>
 </div>
 <div id="step-2-structural-equation-modelling" class="section level2">
 <h2>Step 2: Structural Equation Modelling</h2>
-<p>If the preceeding CFA indicate acceptable results, then continue expanding the model with directional regression analyses, i.e. the structural model, again according to the theoretical model.</p>
+<p>If the preceeding CFA produced acceptable results, then continue expanding the model with two directional regression analyses, i.e. the structural model, again according to the theoretical model.</p>
 <pre class="r"><code>#specify model, latent variables, regressions, residuals, covariances
 iss.model &lt;- &#39;
 # measurement model

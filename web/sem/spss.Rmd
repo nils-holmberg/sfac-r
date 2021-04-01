@@ -9,6 +9,7 @@ date: "210401"
 We illustrate the SEM using a subset of data from the International Sponsorship Study (ISS 2016), which broadly captures consumer attitudes towards international sponsorship deals. Specifically, we test the predictive relationships between four latent factors. 
 
 - https://methods.sagepub.com/dataset/sem-iss-2016
+- [codebook-iss-2016-subset1.csv](../../csv/codebook-iss-2016-subset1.csv)
 
 ## Theoretical model
 We test whether animosity towards Germany and ethnocentrism more generally, predict consumer attitudes (ATT) towards German automotive brand SMART. We also investigate whether higher levels of ATT significantly improve perceptions of fit for a hypothetical sponsorship between SMART and the England international soccer team.

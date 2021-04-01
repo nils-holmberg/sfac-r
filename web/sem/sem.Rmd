@@ -12,7 +12,7 @@ knitr::include_graphics("img/theory-model.jpg")
 ```
 
 ## Step 1: Confirmatory Factor Analysis
-Lets build out the measurement model to include all exogeneous and endogeneous variables in the theoretical model.
+Let's build out the measurement model to include not only the two exogeneous variables discussed in the previous examples, but also the two endogeneous (dependent) variables stated in the theoretical model.
 ```{r}
 #install.packages("lavaan", dependencies=TRUE, lib="C:/Program Files/R/lib")
 #install.packages("lavaan", dependencies=TRUE, lib="~/lib/r-cran")
@@ -42,7 +42,7 @@ summary(fit, fit.measures=TRUE, standardized=TRUE)
 ```
 
 ## Step 2: Structural Equation Modelling
-If the preceeding CFA indicate acceptable results, then continue expanding the model with directional regression analyses, i.e. the structural model, again according to the theoretical model.
+If the preceeding CFA produced acceptable results, then continue expanding the model with two directional regression analyses, i.e. the structural model, again according to the theoretical model.
 ```{r}
 #specify model, latent variables, regressions, residuals, covariances
 iss.model <- '

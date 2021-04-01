@@ -8,9 +8,9 @@ date: "210401"
 ## Introduction
 SEM is a covariance-based statistical methodology. It allows the researcher to test hypotheses about causal relationships, in much the same way as simple or multiple linear regression. It has _three_ advantages over these techniques: 
 
-- **1** SEM allows an entire system of causal predictions to be tested simultaneously, rather than (as in the case of regression) one equation at a time; 
-- **2** SEM normally uses latent factors, typically representing overarching unobserved variables captured in the covariances of related observed variables, and this is beneficial because measurement error can be captured and controlled for; and 
-- **3** the validity of the overall model can be evaluated using global fit indices.
+- **1:**  SEM allows an entire system of causal predictions to be tested simultaneously, rather than (as in the case of regression) one equation at a time; 
+- **2:**  SEM normally uses latent factors, typically representing overarching unobserved variables captured in the covariances of related observed variables, and this is beneficial because measurement error can be captured and controlled for; and 
+- **3:**  the validity of the overall model can be evaluated using global fit indices.
 
 ## Path diagram
 Path diagram, the table below defines the symbols we will be using. Circles represent latent variables, squares represent observed indicators, triangles represent intercepts or means, one-way arrows represent paths and two-way arrows represent either variances or covariances.
