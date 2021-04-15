@@ -11,7 +11,7 @@ date: "210415"
 - latent construct, observed indicator
 - take the self-esteem test
 - measurements, reliability, validity
-- https://www.kaggle.com/lucasgreenwell/rosenberg-self-esteem-scale-responses/version/1
+- [kaggle dataset](https://raw.githubusercontent.com/nils-holmberg/sfac-r/main/csv/rosenberg-self-esteem-datapart.csv)
 
 ## Survey experiment
 - ca 14.00-15.00 pm, work in pairs
