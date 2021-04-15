@@ -6,20 +6,26 @@ date: "210415"
 <br/>
 
 ## Online survey
-- ca 13.00-14.00
-- reliability, validity
-- self-esteem test
-- kaggle dataset
+- ca 13.00-14.00 pm, work in pairs
+- https://nils-holmberg.github.io/sfac-r/web/mlr/survey.html
+- latent construct, observed indicator
+- take the self-esteem test
+- measurements, reliability, validity
+- https://www.kaggle.com/lucasgreenwell/rosenberg-self-esteem-scale-responses/version/1
 
 ## Survey experiment
-- ca 14.00-15.00
-- conditions, power, sample
+- ca 14.00-15.00 pm, work in pairs
+- https://nils-holmberg.github.io/sfac-r/web/mlr/experiment.html
+- conditions, outcomes
 - https://www.youtube.com/watch?v=3jTt7U5Gxtk
+- create online survey experiment
+- hypothesize causal effect of treatment
 
 ## Data analysis
-- ca 15.00-16.00
+- ca 15.00-16.00 pm, work in pairs
+- https://nils-holmberg.github.io/sfac-r/web/mlr/analysis.html
 - descriptive, bivariate
-- exploratory factor analysis
+- exploratory factor analysis (EFA)
 - multiple regression
 - remote spss
 

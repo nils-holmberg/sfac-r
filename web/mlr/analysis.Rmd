@@ -5,12 +5,12 @@ date: "210415"
 ---
 <br/>
 
-## Introduction
-MLR is ...
+## Descriptive, bivariate
+- t-test
 
-```{r img-path, echo=F, fig.cap="Path diagram", out.width='80%', fig.asp=.75, fig.align='center'}
-knitr::include_graphics("img/pathdia.png")
-```
-- https://stats.idre.ucla.edu/r/seminars/rsem/
+## Exploratory factor analysis (EFA)
+- cronbachs alpha
 
+## Multiple linear regression
+- dependent, independent variables
 
