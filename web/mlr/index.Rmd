@@ -5,8 +5,20 @@ date: "210415"
 ---
 <br/>
 
-## Introduction
-MLR is ...
+## Online survey
+- reliability, validity
+- self-esteem test
+- kaggle dataset
+
+## Survey experiment
+- condition, power, sample
+- https://www.youtube.com/watch?v=3jTt7U5Gxtk
+
+## Data analysis
+- descriptive, bivariate
+- factor analysis
+- multiple regression
+- remote spss
 
 ```{r img-path, echo=F, fig.cap="Path diagram", out.width='80%', fig.asp=.75, fig.align='center'}
 knitr::include_graphics("img/pathdia.png")
