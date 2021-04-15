@@ -1,5 +1,5 @@
 ---
-title: "Workshop Quantitative Methods"
+title: "Multiple Linear Regression in R"
 author: "Nils Holmberg"
 date: "210415"
 ---

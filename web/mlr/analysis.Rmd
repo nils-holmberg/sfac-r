@@ -1,5 +1,5 @@
 ---
-title: "Workshop Quantitative Methods"
+title: "Analysis"
 author: "Nils Holmberg"
 date: "210415"
 ---
