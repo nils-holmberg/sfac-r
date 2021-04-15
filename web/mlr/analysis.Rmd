@@ -9,6 +9,7 @@ date: "210415"
 - t-test
 
 ## Exploratory factor analysis (EFA)
+- https://www.youtube.com/watch?v=pRA3Wapx7fY
 - cronbachs alpha
 
 ## Multiple linear regression
