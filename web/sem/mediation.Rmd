@@ -1,12 +1,19 @@
 ---
 title: "Mediation"
 author: "Nils Holmberg"
-date: "210401"
+date: "210531"
 ---
 <br/>
+
+## Mediators and moderators
+```{r img-med, echo=F, fig.cap="Mediators and moderators", out.width='80%', fig.asp=.75, fig.align='center'}
+knitr::include_graphics("img/mediator-and-moderator-variables.png")
+```
 
 ## TODO
 data contains observations of..
 ```{r}
 #
 ```
+
+
