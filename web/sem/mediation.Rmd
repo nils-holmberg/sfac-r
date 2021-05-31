@@ -13,7 +13,9 @@ knitr::include_graphics("img/mediator-and-moderator-variables.png")
 ## TODO
 data contains observations of..
 ```{r}
-#
+#export csv
+#write.table(tmp, "PoliticalDemocracy.csv", sep="\t", row.names=F)
+#write.table(tmp, "HolzingerSwineford1939.csv", sep="\t", row.names=F)
 ```
 
 
