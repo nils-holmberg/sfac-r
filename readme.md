@@ -2,7 +2,9 @@
 
 # using r in the social sciences
 
-some course related projects here..
+## sfac-r
+
+[using bookdown, blogdown, pkgdown](web/bkd/)
 
 ## simm32
 
