@@ -14,5 +14,10 @@
 
 ## komc30
 
-multinomial naive bayes text classifier
+[multinomial naive bayes text classifier](https://www.kaggle.com/nilsholmberg/scom-komc30)
+
+
+
+
+
 
