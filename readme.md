@@ -1,4 +1,4 @@
-- [home](https://github.com/nils-holmberg/sfac-r)
+- [home](https://nils-holmberg.github.io/sfac-r/)
 
 # using r in the social sciences
 
