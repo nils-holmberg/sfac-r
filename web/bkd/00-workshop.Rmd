@@ -1,8 +1,14 @@
 # workshop 211021
 
+## workshop material 
+
+please download github repo as zip [https://github.com/nils-holmberg/sfac-r](https://github.com/nils-holmberg/sfac-r)
+
+demo will be held using [https://rstudio.cloud](https://rstudio.cloud)
+
 ## install libs
 
-```{r}
+```{r, eval=F}
 install.packages("rmarkdown")
 install.packages("bookdown")
 #library(rmarkdown)
@@ -11,9 +17,10 @@ install.packages("bookdown")
 
 ## test compile rmarkdown
 
-cd to web/bkd
+cd to sfac-r-main/web/bkd
 
-```{r}
+```{r, eval=F}
+#setwd("/cloud/project/sfac-r-main/web/bkd")
 rmarkdown::render('document1.Rmd', output_format='all', output_dir='./')
 ```
 
@@ -25,20 +32,20 @@ or web/bkd dir
 
 ## test compile with bookdown
 
-```{r}
+```{r, eval=F}
 bookdown::render_book('index.Rmd', output_dir='./')
 ```
 
 
-```{r}
+```{r, eval=F}
 ```
 
 
-```{r}
+```{r, eval=F}
 ```
 
 
-```{r}
+```{r, eval=F}
 ```
 
 
