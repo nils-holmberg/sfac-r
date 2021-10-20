@@ -1,0 +1,18 @@
+---
+title: "some new title"
+output:
+  pdf_document: default
+  word_document:
+    reference_docx: ../tmp/styles.docx
+---
+
+# Kapitel
+I denna del av boken följer vi utvecklingen och genomförandet av ett samhällsvetenskapligt experiment. Exempel på en **figur** kommer här:
+
+```{r fig01-01, fig.cap='En figur.', out.width='80%', fig.asp=.75, fig.align='center', echo=F, results=F, message=F}
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = 'b', pch = 19)
+```
+
+En linjär modell.
+

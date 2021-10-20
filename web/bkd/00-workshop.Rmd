@@ -1,0 +1,49 @@
+# workshop 211021
+
+## install libs
+
+```{r}
+install.packages("rmarkdown")
+install.packages("bookdown")
+#library(rmarkdown)
+#library(bookdown)
+```
+
+## test compile rmarkdown
+
+cd to web/bkd
+
+```{r}
+rmarkdown::render('document1.Rmd', output_format='all', output_dir='./')
+```
+
+## get bookdown demo
+
+download from github [https://github.com/rstudio/bookdown-demo](https://github.com/rstudio/bookdown-demo)
+
+or web/bkd dir
+
+## test compile with bookdown
+
+```{r}
+bookdown::render_book('index.Rmd', output_dir='./')
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+
+
+
+
+
