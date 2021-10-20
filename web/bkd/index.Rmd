@@ -1,6 +1,6 @@
 --- 
 title: "A Minimal Book Example"
-author: "Yihui Xie (not Nils)"
+author: "Yihui Xie (Workshop material by Nils Holmberg)"
 date: "`r Sys.time()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
@@ -12,25 +12,59 @@ github-repo: rstudio/bookdown-demo
 description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
 ---
 
-# Prerequisites
+# Workshop 211021
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
+## workshop material 
 
-The **bookdown** package can be installed from CRAN or Github:
+in order to follow along, please download github repo as zip [https://github.com/nils-holmberg/sfac-r](https://github.com/nils-holmberg/sfac-r)
 
-```{r eval=FALSE}
+demo will be held using [https://rstudio.cloud](https://rstudio.cloud)
+
+## install libs
+
+```{r, eval=F}
+install.packages("rmarkdown")
 install.packages("bookdown")
-# or the development version
-# devtools::install_github("rstudio/bookdown")
+#library(rmarkdown)
+#library(bookdown)
 ```
 
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
+## test compile rmarkdown
 
-To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.name/tinytex/>.
+cd to sfac-r-main/web/bkd
 
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
+```{r, eval=F}
+#setwd("/cloud/project/sfac-r-main/web/bkd")
+rmarkdown::render('document1.Rmd', output_format='all', output_dir='./')
 ```
+
+## get bookdown demo
+
+download from github [https://github.com/rstudio/bookdown-demo](https://github.com/rstudio/bookdown-demo)
+
+or web/bkd dir
+
+## test compile with bookdown
+
+```{r, eval=F}
+bookdown::render_book('index.Rmd', output_dir='./')
+```
+
+
+```{r, eval=F}
+```
+
+
+```{r, eval=F}
+```
+
+
+```{r, eval=F}
+```
+
+
+
+
+
+
+
