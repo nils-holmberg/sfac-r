@@ -3,7 +3,7 @@ title: "some new title"
 output:
   pdf_document: default
   word_document:
-    reference_docx: ../tmp/styles.docx
+    reference_docx: styles.docx
 ---
 
 # Kapitel

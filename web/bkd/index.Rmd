@@ -25,31 +25,32 @@ unzip repo file and find it in rstudio, demo will be held using [https://rstudio
 ```{r, eval=F}
 install.packages("rmarkdown")
 install.packages("bookdown")
+#install.packages("bslib")
 #library(rmarkdown)
 #library(bookdown)
 ```
 
-## test compile rmarkdown
+## test rmarkdown
 
-cd to sfac-r-main/web/bkd
+we are going to use rmarkdown to render a single Rmd document, cd to sfac-r-main/web/bkd
 
 ```{r, eval=F}
 #setwd("/cloud/project/sfac-r-main/web/bkd")
 rmarkdown::render('document1.Rmd', output_format='all', output_dir='./')
 ```
 
-## get bookdown demo
+the output formats are specified in the yaml header of the Rmd file, you can preview the result by opening the output file
 
-download from github [https://github.com/rstudio/bookdown-demo](https://github.com/rstudio/bookdown-demo)
+## test bookdown
 
-or web/bkd dir
-
-## test compile with bookdown
+now we are going to try to render a collection of Rmd files as a book, the original bookdown demo can be found on github [https://github.com/rstudio/bookdown-demo](https://github.com/rstudio/bookdown-demo), but you can also change directory to sfac-r-main/web/bkd 
 
 ```{r, eval=F}
+#setwd("/cloud/project/sfac-r-main/web/bkd")
 bookdown::render_book('index.Rmd', output_dir='./')
 ```
 
+the output formats are specified in the yaml header of the index.Rmd file, you can preview the result of any changes by opening the index.html file
 
 ```{r, eval=F}
 ```

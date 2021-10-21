@@ -140,9 +140,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#workshop-material"><i class="fa fa-check"></i><b>1.1</b> workshop material</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#install-libs"><i class="fa fa-check"></i><b>1.2</b> install libs</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#test-compile-rmarkdown"><i class="fa fa-check"></i><b>1.3</b> test compile rmarkdown</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#get-bookdown-demo"><i class="fa fa-check"></i><b>1.4</b> get bookdown demo</a></li>
-<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#test-compile-with-bookdown"><i class="fa fa-check"></i><b>1.5</b> test compile with bookdown</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#test-rmarkdown"><i class="fa fa-check"></i><b>1.3</b> test rmarkdown</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#test-bookdown"><i class="fa fa-check"></i><b>1.4</b> test bookdown</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="prerequisites.html"><a href="prerequisites.html"><i class="fa fa-check"></i><b>2</b> Prerequisites</a></li>
 <li class="chapter" data-level="3" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>3</b> Introduction</a></li>
@@ -181,7 +180,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">A Minimal Book Example</h1>
 <p class="author"><em>Yihui Xie (Workshop material by Nils Holmberg)</em></p>
-<p class="date"><em>2021-10-20 17:15:00</em></p>
+<p class="date"><em>2021-10-21 05:59:04</em></p>
 </div>
 <div id="workshop-211021" class="section level1" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Workshop 211021</h1>
@@ -194,23 +193,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">1.2</span> install libs</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true"></a><span class="kw">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>)</span>
 <span id="cb1-2"><a href="index.html#cb1-2" aria-hidden="true"></a><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb1-3"><a href="index.html#cb1-3" aria-hidden="true"></a><span class="co">#library(rmarkdown)</span></span>
-<span id="cb1-4"><a href="index.html#cb1-4" aria-hidden="true"></a><span class="co">#library(bookdown)</span></span></code></pre></div>
+<span id="cb1-3"><a href="index.html#cb1-3" aria-hidden="true"></a><span class="co">#install.packages(&quot;bslib&quot;)</span></span>
+<span id="cb1-4"><a href="index.html#cb1-4" aria-hidden="true"></a><span class="co">#library(rmarkdown)</span></span>
+<span id="cb1-5"><a href="index.html#cb1-5" aria-hidden="true"></a><span class="co">#library(bookdown)</span></span></code></pre></div>
 </div>
-<div id="test-compile-rmarkdown" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> test compile rmarkdown</h2>
-<p>cd to sfac-r-main/web/bkd</p>
+<div id="test-rmarkdown" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> test rmarkdown</h2>
+<p>we are going to use rmarkdown to render a single Rmd document, cd to sfac-r-main/web/bkd</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1" aria-hidden="true"></a><span class="co">#setwd(&quot;/cloud/project/sfac-r-main/web/bkd&quot;)</span></span>
 <span id="cb2-2"><a href="index.html#cb2-2" aria-hidden="true"></a>rmarkdown<span class="op">::</span><span class="kw">render</span>(<span class="st">&#39;document1.Rmd&#39;</span>, <span class="dt">output_format=</span><span class="st">&#39;all&#39;</span>, <span class="dt">output_dir=</span><span class="st">&#39;./&#39;</span>)</span></code></pre></div>
+<p>the output formats are specified in the yaml header of the Rmd file, you can preview the result by opening the output file</p>
 </div>
-<div id="get-bookdown-demo" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> get bookdown demo</h2>
-<p>download from github <a href="https://github.com/rstudio/bookdown-demo">https://github.com/rstudio/bookdown-demo</a></p>
-<p>or web/bkd dir</p>
-</div>
-<div id="test-compile-with-bookdown" class="section level2" number="1.5">
-<h2><span class="header-section-number">1.5</span> test compile with bookdown</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="index.html#cb3-1" aria-hidden="true"></a>bookdown<span class="op">::</span><span class="kw">render_book</span>(<span class="st">&#39;index.Rmd&#39;</span>, <span class="dt">output_dir=</span><span class="st">&#39;./&#39;</span>)</span></code></pre></div>
+<div id="test-bookdown" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> test bookdown</h2>
+<p>now we are going to try to render a collection of Rmd files as a book, the original bookdown demo can be found on github <a href="https://github.com/rstudio/bookdown-demo">https://github.com/rstudio/bookdown-demo</a>, but you can also change directory to sfac-r-main/web/bkd</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="index.html#cb3-1" aria-hidden="true"></a><span class="co">#setwd(&quot;/cloud/project/sfac-r-main/web/bkd&quot;)</span></span>
+<span id="cb3-2"><a href="index.html#cb3-2" aria-hidden="true"></a>bookdown<span class="op">::</span><span class="kw">render_book</span>(<span class="st">&#39;index.Rmd&#39;</span>, <span class="dt">output_dir=</span><span class="st">&#39;./&#39;</span>)</span></code></pre></div>
+<p>the output formats are specified in the yaml header of the index.Rmd file, you can preview the result of any changes by opening the index.html file</p>
 
 </div>
 </div>
