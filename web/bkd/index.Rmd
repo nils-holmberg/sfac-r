@@ -17,7 +17,7 @@ description: "This is a minimal example of using the bookdown package to write a
 ## workshop material 
 
 - in order to follow along, please download github repo as zip file [https://github.com/nils-holmberg/sfac-r/archive/refs/heads/main.zip](https://github.com/nils-holmberg/sfac-r/archive/refs/heads/main.zip)
-- unzip repo file and find it in rstudio, demo will be held using [https://rstudio.cloud](https://rstudio.cloud) by uploading zip file here
+- unzip repo file on local computer and navigate to it in rstudio, or upload zip file to [https://rstudio.cloud](https://rstudio.cloud), demo will be held on this web service
 
 ## install libs
 
