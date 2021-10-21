@@ -143,7 +143,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#test-rmarkdown"><i class="fa fa-check"></i><b>1.3</b> test rmarkdown</a></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#test-bookdown"><i class="fa fa-check"></i><b>1.4</b> test bookdown</a></li>
 <li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#publish-book"><i class="fa fa-check"></i><b>1.5</b> publish book</a></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#troubleshoot"><i class="fa fa-check"></i><b>1.6</b> troubleshoot</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#collaborate"><i class="fa fa-check"></i><b>1.6</b> collaborate</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#troubleshoot"><i class="fa fa-check"></i><b>1.7</b> troubleshoot</a></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#deploy-to-github"><i class="fa fa-check"></i><b>1.8</b> deploy to github</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="prerequisites.html"><a href="prerequisites.html"><i class="fa fa-check"></i><b>2</b> Prerequisites</a></li>
 <li class="chapter" data-level="3" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>3</b> Introduction</a></li>
@@ -182,7 +184,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">A Minimal Book Example</h1>
 <p class="author"><em>Yihui Xie (Workshop material by Nils Holmberg)</em></p>
-<p class="date"><em>2021-10-21 07:24:46</em></p>
+<p class="date"><em>2021-10-21 09:20:10</em></p>
 </div>
 <div id="workshop-211021" class="section level1" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Workshop 211021</h1>
@@ -205,18 +207,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="test-rmarkdown" class="section level2" number="1.3">
 <h2><span class="header-section-number">1.3</span> test rmarkdown</h2>
 <ul>
-<li>we are going to use rmarkdown to render a single Rmd document, cd to sfac-r-main/web/bkd/workshop</li>
+<li>we are going to use rmarkdown to render a single Rmd document, setwd() to sfac-r-main/web/bkd/workshop</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1" aria-hidden="true"></a><span class="co">#setwd(&quot;/cloud/project/sfac-r-main/web/bkd&quot;)</span></span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1" aria-hidden="true"></a><span class="co">#setwd(&quot;/cloud/project/sfac-r-main/web/bkd/workshop&quot;)</span></span>
 <span id="cb2-2"><a href="index.html#cb2-2" aria-hidden="true"></a>rmarkdown<span class="op">::</span><span class="kw">render</span>(<span class="st">&#39;document1.Rmd&#39;</span>, <span class="dt">output_format=</span><span class="st">&#39;all&#39;</span>, <span class="dt">output_dir=</span><span class="st">&#39;./&#39;</span>)</span>
 <span id="cb2-3"><a href="index.html#cb2-3" aria-hidden="true"></a><span class="co">#rmarkdown::render(&#39;document2.Rmd&#39;, output_format=&#39;all&#39;, output_dir=&#39;./&#39;)</span></span></code></pre></div>
 <ul>
 <li>the output formats are specified in the yaml header of the Rmd file, you can preview the result by opening the output file</li>
+<li>when using docx output, we can use a reference document that will determine the styling of the output (could be useful for journal article templates ?)</li>
 </ul>
 </div>
 <div id="test-bookdown" class="section level2" number="1.4">
 <h2><span class="header-section-number">1.4</span> test bookdown</h2>
 <ul>
+<li>bookdown is build on top of rmarkdown, and its primary function is to handle multiple Rmd files and render them as a coherent output document</li>
 <li>now we are going to try to render a collection of Rmd files as a book, the original bookdown demo can be found on github <a href="https://github.com/rstudio/bookdown-demo">https://github.com/rstudio/bookdown-demo</a>, but you can also change directory to sfac-r-main/web/bkd</li>
 </ul>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="index.html#cb3-1" aria-hidden="true"></a><span class="co">#setwd(&quot;/cloud/project/sfac-r-main/web/bkd&quot;)</span></span>
@@ -229,23 +233,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">1.5</span> publish book</h2>
 <ul>
 <li>if we have a git client and a github account, the book could now be published to github</li>
-<li>however, we can also choose to publish to the web service <a href="https://bookdown.org/">https://bookdown.org/</a> by creating a free account there</li>
+<li>however, we can also choose to publish to the web service <a href="https://bookdown.org/">https://bookdown.org/</a> by creating a freemium account there</li>
 </ul>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="index.html#cb4-1" aria-hidden="true"></a><span class="co"># rstudio connect package</span></span>
-<span id="cb4-2"><a href="index.html#cb4-2" aria-hidden="true"></a>rsconnect<span class="op">::</span><span class="kw">accounts</span>()</span></code></pre></div>
+<span id="cb4-2"><a href="index.html#cb4-2" aria-hidden="true"></a>rsconnect<span class="op">::</span><span class="kw">accounts</span>()</span>
+<span id="cb4-3"><a href="index.html#cb4-3" aria-hidden="true"></a><span class="co">#rsconnect::connectUser(account=&quot;nils.holmberg&quot;, server=&quot;bookdown.org&quot;)</span></span></code></pre></div>
 <ul>
 <li>the following commands can also be accessed more easily through the rstudio gui</li>
-<li>connect your r client to …..</li>
-<li>when publishing the bookdown book, we need to stand in the correct working directory</li>
+<li>connect your r client to bookdown.org, rstudio connect while being logged in with web browser</li>
+<li>when publishing the bookdown file bundle, we need to stand in the correct working directory</li>
 </ul>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="index.html#cb5-1" aria-hidden="true"></a><span class="co">#setwd(&quot;/cloud/project/sfac-r-main/web/bkd&quot;)</span></span>
 <span id="cb5-2"><a href="index.html#cb5-2" aria-hidden="true"></a>bookdown<span class="op">::</span><span class="kw">publish_book</span>(<span class="dt">render=</span><span class="st">&quot;local&quot;</span>, <span class="dt">account=</span><span class="st">&quot;nils.holmberg&quot;</span>, <span class="dt">server=</span><span class="st">&quot;bookdown.org&quot;</span>, <span class="dt">name=</span><span class="st">&quot;sfac-r-bookdown&quot;</span>)</span></code></pre></div>
 </div>
-<div id="troubleshoot" class="section level2" number="1.6">
-<h2><span class="header-section-number">1.6</span> troubleshoot</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="index.html#cb6-1" aria-hidden="true"></a>rsconnect<span class="op">::</span><span class="kw">deployments</span>(<span class="st">&quot;.&quot;</span>)</span>
-<span id="cb6-2"><a href="index.html#cb6-2" aria-hidden="true"></a><span class="co">#rsconnect::forgetDeployment(dryRun = TRUE)</span></span>
-<span id="cb6-3"><a href="index.html#cb6-3" aria-hidden="true"></a><span class="co">#rsconnect::deploySite(account=&quot;nils.holmberg&quot;, siteName=&quot;sfac-r-bookdown&quot;, appId=9002, server=&quot;bookdown.org&quot;)</span></span></code></pre></div>
+<div id="collaborate" class="section level2" number="1.6">
+<h2><span class="header-section-number">1.6</span> collaborate</h2>
+<ul>
+<li>seems to only be available for shinyapps at this point, however web interface to rsconnect might have these functions available..</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="index.html#cb6-1" aria-hidden="true"></a>rsconnect<span class="op">::</span><span class="kw">showUsers</span>(<span class="dt">account=</span><span class="st">&quot;nils-holmberg&quot;</span>, <span class="dt">server=</span><span class="st">&quot;shinyapps.io&quot;</span>)</span></code></pre></div>
+</div>
+<div id="troubleshoot" class="section level2" number="1.7">
+<h2><span class="header-section-number">1.7</span> troubleshoot</h2>
+<ul>
+<li>instead of using the publish_book() function provided by the bookdown package, we can also try to deploy site using the rsconnect package to publish rendered Rmd output files</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="index.html#cb7-1" aria-hidden="true"></a>rsconnect<span class="op">::</span><span class="kw">deployments</span>(<span class="st">&quot;.&quot;</span>)</span>
+<span id="cb7-2"><a href="index.html#cb7-2" aria-hidden="true"></a><span class="co">#rsconnect::forgetDeployment(dryRun = TRUE)</span></span>
+<span id="cb7-3"><a href="index.html#cb7-3" aria-hidden="true"></a><span class="co">#rsconnect::deploySite(account=&quot;nils.holmberg&quot;, siteName=&quot;sfac-r-bookdown&quot;, server=&quot;bookdown.org&quot;)</span></span></code></pre></div>
+</div>
+<div id="deploy-to-github" class="section level2" number="1.8">
+<h2><span class="header-section-number">1.8</span> deploy to github</h2>
 
 </div>
 </div>

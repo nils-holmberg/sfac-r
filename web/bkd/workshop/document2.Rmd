@@ -7,7 +7,7 @@ output:
     default
   bookdown::word_document2:
     toc: true
-    reference_docx: ../tmp/styles.docx
+    reference_docx: styles.docx
 ---
 
 # Kapitel

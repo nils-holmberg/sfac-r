@@ -32,18 +32,20 @@ install.packages("rsconnect")
 
 ## test rmarkdown
 
-- we are going to use rmarkdown to render a single Rmd document, cd to sfac-r-main/web/bkd/workshop
+- we are going to use rmarkdown to render a single Rmd document, setwd() to sfac-r-main/web/bkd/workshop
 
 ```{r, eval=F}
-#setwd("/cloud/project/sfac-r-main/web/bkd")
+#setwd("/cloud/project/sfac-r-main/web/bkd/workshop")
 rmarkdown::render('document1.Rmd', output_format='all', output_dir='./')
 #rmarkdown::render('document2.Rmd', output_format='all', output_dir='./')
 ```
 
 - the output formats are specified in the yaml header of the Rmd file, you can preview the result by opening the output file
+- when using docx output, we can use a reference document that will determine the styling of the output (could be useful for journal article templates ?)
 
 ## test bookdown
 
+- bookdown is build on top of rmarkdown, and its primary function is to handle multiple Rmd files and render them as a coherent output document
 - now we are going to try to render a collection of Rmd files as a book, the original bookdown demo can be found on github [https://github.com/rstudio/bookdown-demo](https://github.com/rstudio/bookdown-demo), but you can also change directory to sfac-r-main/web/bkd 
 
 ```{r, eval=F}
@@ -56,30 +58,42 @@ bookdown::render_book('index.Rmd', output_dir='./')
 ## publish book
 
 - if we have a git client and a github account, the book could now be published to github 
-- however, we can also choose to publish to the web service [https://bookdown.org/](https://bookdown.org/) by creating a free account there
+- however, we can also choose to publish to the web service [https://bookdown.org/](https://bookdown.org/) by creating a freemium account there
 
 ```{r, eval=F}
 # rstudio connect package
 rsconnect::accounts()
+#rsconnect::connectUser(account="nils.holmberg", server="bookdown.org")
 ```
 
 - the following commands can also be accessed more easily through the rstudio gui
-- connect your r client to .....
-- when publishing the bookdown book, we need to stand in the correct working directory
+- connect your r client to bookdown.org, rstudio connect while being logged in with web browser
+- when publishing the bookdown file bundle, we need to stand in the correct working directory
 
 ```{r, eval=F}
 #setwd("/cloud/project/sfac-r-main/web/bkd")
 bookdown::publish_book(render="local", account="nils.holmberg", server="bookdown.org", name="sfac-r-bookdown")
 ```
 
+## collaborate
+
+- seems to only be available for shinyapps at this point, however web interface to rsconnect might have these functions available..
+
+```{r, eval=F}
+rsconnect::showUsers(account="nils-holmberg", server="shinyapps.io")
+```
+
 ## troubleshoot
+
+- instead of using the publish_book() function provided by the bookdown package, we can also try to deploy site using the rsconnect package to publish rendered Rmd output files
 
 ```{r, eval=F}
 rsconnect::deployments(".")
 #rsconnect::forgetDeployment(dryRun = TRUE)
-#rsconnect::deploySite(account="nils.holmberg", siteName="sfac-r-bookdown", appId=9002, server="bookdown.org")
+#rsconnect::deploySite(account="nils.holmberg", siteName="sfac-r-bookdown", server="bookdown.org")
 ```
 
+## deploy to github
 
 ```{r, eval=F}
 ```
