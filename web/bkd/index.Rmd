@@ -96,6 +96,7 @@ rsconnect::deployments(".")
 ## deploy to github
 
 - an example of a collaborative bookdown project that consists of multiple book parts [https://nils-holmberg.github.io/scom-expb/web/](https://nils-holmberg.github.io/scom-expb/web/)
+- reviewers needed, please contact me if you are interested or know someone who might be [nils.holmberg@isk.lu.se](mailto:nils.holmberg@isk.lu.se)
 
 ```{r, eval=F}
 ```
